@@ -1,1 +1,73 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  font-style: normal;
+  color: $primary-text-color;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  position: static;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+}
+
+
+@media (min-width: $desktop-width) {
+  .body {
+    position: relative;
+  }
+
+  .body--index-page::before,
+  .body--index-page::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 694px;
+  }
+
+  .body--index-page::before {
+    background-image:
+      image-set(
+        url("../../images/background-images/index-background@1x.jpeg") type("image/jpeg") 1x,
+        url("../../images/background-images/index-background@2x.jpeg") type("image/jpeg") 2x,
+        url("../../images/background-images/index-background@1x.webp") type("image/webp") 1x,
+        url("../../images/background-images/index-background@2x.webp") type("image/webp") 1x),
+      linear-gradient(90deg, #414045 100%, #4d4c51 100%);
+    background-position: left center, top left;
+    background-repeat: no-repeat, repeat-x;
+    background-size: 1041px 694px, auto 694px;
+  }
+
+  .body--index-page::after {
+    background-color: $accent-color;
+    opacity: 0.85;
+  }
+}
