@@ -344,7 +344,7 @@
         </li>
 
         <!-- Карточка показать все -->
-        <li class="product product-more">
+        <li class="product product--more-products">
           <h2 class="title title--more">Показать еще 100500 товаров</h2>
           <p class="product__more-text">На самом деле вкусов гораздо больше!</p>
           <a class="btn btn--more" href="#">Показать все</a>
@@ -419,7 +419,7 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
         <label class="form__label" for="mail-area">
           <span class="visually-hidden">Подписка на новости</span>
-          <input class="form__mail" type="email" id="mail-area" name="for-mail" pattern="кuklachev@gmail\.com" placeholder="кuklachev@gmail.com" autocomplete="email" required>
+          <input class="form__mail form__mail--clear" type="email" id="mail-area" name="for-mail" placeholder="кuklachev@gmail.com" autocomplete="email" required>
         </label>
         <button class="btn btn--submit" type="submit">Подписаться</button>
       </form>
@@ -447,7 +447,7 @@
           <img class="footer__map-image" src="images/map-images/map-mobile@1x.jpg" srcset="images/map-images/map-mobile@2x.jpg 2x" alt="Карта" width="320" height="362">
         </picture>
 
-        <iframe class="footer__map-iframe" title="Карта проезда к HTML Academy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A49028048e632a28f992018be98333db174edac64d74613117fad716b3efa6853&amp;source=constructor"></iframe>
+        <iframe class="footer__map-iframe footer__map-iframe--nojs" title="Карта проезда к HTML Academy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A49028048e632a28f992018be98333db174edac64d74613117fad716b3efa6853&amp;source=constructor"></iframe>
 
       </div>
 
@@ -488,6 +488,7 @@
     </div>
   </footer>
   <script src="scripts/index.js" defer="defer"></script>
+  <script src="scripts/map.js" defer="defer"></script>
 </body>
 
 </html>
